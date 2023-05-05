@@ -78,7 +78,7 @@ class GenomicsOpsApi implements GenomicsOpsApiInterface {
       ]];
       $response = $this->buildRequest('GET', 'utilities/get-feature-coordinates', $options);
       if ($response) {
-        $contents = $response->getBody()->getContents();
+        $contents = json_decode($response->getBody()->getContents());
         if ($contents) {
           $data = current($contents);
           return get_object_vars($data);
