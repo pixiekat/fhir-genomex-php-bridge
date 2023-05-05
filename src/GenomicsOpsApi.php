@@ -91,14 +91,14 @@ class GenomicsOpsApi implements GenomicsOpsApiInterface {
   /**
    * {@inheritdoc}
    */
-  public function getSubject() {
+  public function getSubject(): ?string {
     return $this->subject;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setSubject($subject) {
+  public function setSubject($subject): self {
     $this->subject = $subject;
     return $this;
   }
